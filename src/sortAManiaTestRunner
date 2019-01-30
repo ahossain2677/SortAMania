@@ -1,0 +1,11 @@
+public static void main (String[] args)
+{
+
+  SortCompetititon team 1 = new Team1SortCompetition(); // creates an instance for the class
+  int [] randIntArr = randomIntsArr(10000); // initialize a random int array 
+  String[] randStringArr = randomStringArr(10000,5); // init a random string array 
+  
+  System.out.println("Unsorted);
+  printArr(randIntArr); // print out the unsorted int array
+  
+  long time = System.currentTimeMillis
