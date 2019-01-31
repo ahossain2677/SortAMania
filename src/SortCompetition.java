@@ -4,7 +4,32 @@
 public abstract class
 SortCompetition {
 	
+        public static void swap(int[] arr, int i, int j) {
+        	int temp = arr[i];
+       	        arr[i] = arr[j];
+       		arr[j] = temp;
+    	}
+	
 	public abstract int challengeOne(int[] arr);
+	
+	public static int[] randomIntsArr(int num){
+        	int []arr = new int[num];
+        	for(int i =0; i <arr.length; i++){
+      	        arr[i] = (int)(Math.random()*10000);
+       		}
+           return arr;
+    	}
+	
+	public static int median(int[] arr) {
+       		 int mid = 0;
+       		 if(arr.length % 2 == 0) {
+        	 med = (arr[arr.length / 2 + 1] + arr[arr.length / 2]) / 2;
+       	 }
+       	 else{
+            	 med = arr[arr.length / 2];
+        }
+        return med;
+    }
 
 	public abstract int challengeTwo(String[] arr, String query);
 
