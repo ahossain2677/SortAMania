@@ -33,7 +33,15 @@ SortCompetition {
 
 	public abstract int challengeTwo(String[] arr, String query);
 
-	public abstract int challengeThree(int[] arr);
+	public abstract int challengeThree(int[] arr); 
+	
+	public static int[]randomNearSort(int num) {
+		int []arr = new int[num];
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = i + 1;
+		}
+		return arr;
+	}
 
 	public abstract int challengeFour(int[][] arr);
 
