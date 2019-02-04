@@ -31,23 +31,41 @@ SortCompetition {
         return med;
     }
 
-	public abstract int challengeTwo(String[] arr, String query);
-	{
-	string word = "";
-	public class CompareTo {
-      	for (x=0;x=<10000;x++){
-  	randStringArr[x]=str1;
-       	int var1 = str1.compareTo( str2 );
-	}
-      	if(var1=0)
-	{
-	Print x;
-	}
-	else
-	{
-	print -1
-	   }
-	}
+    public abstract int challengeTwo(String[] arr, String query);
+
+    {
+        String word = "";
+        int x=0;
+        int y = x+1;
+        arr [x]= String str2;
+        arr[y] = String str1;
+        int var0 = str2.compareTo(word);
+        if(var0 = 0);
+        {
+    }
+
+        public class CompareTo {
+
+
+                    for(x=0;x=<10000;x++)
+            {
+
+                int var1 = str1.compareTo(str2);
+                if(var1=0)
+
+            {
+                print x;
+            }
+            else
+
+            {
+                print "-1";
+            }
+            }
+                                }
+
+    }
+}
 
 	public abstract int challengeThree(int[] SortChallengeThree)
 	{
