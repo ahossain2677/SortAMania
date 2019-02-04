@@ -32,6 +32,22 @@ SortCompetition {
     }
 
 	public abstract int challengeTwo(String[] arr, String query);
+	{
+	string word = "";
+	public class CompareTo {
+      	for (x=0;x=<10000;x++){
+  	randStringArr[x]=str1;
+       	int var1 = str1.compareTo( str2 );
+	}
+      	if(var1=0)
+	{
+	Print x;
+	}
+	else
+	{
+	print -1
+	   }
+	}
 
 	public abstract int challengeThree(int[] arr); 
 	
