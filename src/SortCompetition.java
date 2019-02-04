@@ -36,7 +36,7 @@ SortCompetition {
     	}
 	
 	public static int median(int[] arr) {
-       		 int mid = 0;
+       		 int med = 0;
        		 if(arr.length % 2 == 0) {
         	 med = (arr[arr.length / 2 + 1] + arr[arr.length / 2]) / 2;
        	 }
