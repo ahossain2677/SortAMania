@@ -83,7 +83,7 @@ SortCompetition {
     }
 }
 
-	public abstract int challengeThree(int[] SortChallengeThree)
+	public static int challengeThree(int[] SortChallengeThree)
 	{
 		int mid = 0;
        		if(Arr.length % 2 == 0) 
@@ -129,7 +129,11 @@ SortCompetition {
 		return Arr;
 	}
 
-	public abstract int challengeFour(int[][] arr);
+	public static int challengeFour(int[][] arr)
+	{
+		
+	}
+
 
 	public abstract int challengeFive(Comparable[] arr, Comparable query);
 
