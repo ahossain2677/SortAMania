@@ -48,40 +48,43 @@ SortCompetition {
     }
 
     public abstract int challengeTwo(String[] arr, String query);
-
-    {
-        String word = "";
-        int x=0;
-        int y = x+1;
-        arr [x]= String str2;
-        arr[y] = String str1;
-        int var0 = str2.compareTo(word);
-        if(var0 = 0);
         {
-    }
-
-        public class CompareTo {
 
 
-                    for(x=0;x=<10000;x++)
-            {
+public class CompareTo {
+    String word = "hello";
+    int x=1;
+    int y = x+1;
+    String[] arr [x]= String str2;
+    String arr[y] = String str1;
+    String arr[0] = String strI ;
+    int var0 = strI.compareTo(word);
+      
+        if(var0 = 0);
+    { System.out.print("0");
+    }else{
+        System.out.print("-1"); }
 
-                int var1 = str1.compareTo(str2);
-                if(var1=0)
+      
+        for(x=1;x=<10000;x++)
+    {
 
-            {
-                print x;
-            }
-            else
+        int var1 = str1.compareTo(str2);
+        if(var1=0)
 
-            {
-                print "-1";
-            }
-            }
-                                }
+        {
+            System.out.print(x);
+        }
+        else
 
+        {
+            System.out.print("-1");
+        }
     }
 }
+
+    }
+
 
 	public static int challengeThree(int[] SortChallengeThree)
 	{
