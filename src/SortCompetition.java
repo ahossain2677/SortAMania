@@ -10,7 +10,23 @@ SortCompetition {
        		arr[j] = temp;
     	}
 	
-	public abstract int challengeOne(int[] arr);
+	public static void bubbleSort(int[] arr){
+        int x = 1;
+        while (x !=0){
+            x=0;
+            for (int i=0; i<arr.length-1; i++){
+                if (arr[i] > arr[i + 1]) {
+                    swap(arr, arr[i], arr[i+1]);
+                    x++;
+                }
+            }
+        }
+    }
+	
+	public abstract int challengeOne(int[] arr){
+		bubbleSort(arr);
+		median(arr);
+	}
 	
 	public static int[] randomIntsArr(int num){
         	int []arr = new int[num];
@@ -21,7 +37,7 @@ SortCompetition {
     	}
 	
 	public static int median(int[] arr) {
-       		 int mid = 0;
+       		 int med = 0;
        		 if(arr.length % 2 == 0) {
         	 med = (arr[arr.length / 2 + 1] + arr[arr.length / 2]) / 2;
        	 }
