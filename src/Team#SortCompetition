@@ -86,51 +86,69 @@ public class CompareTo {
     }
 
 
-	public static int challengeThree(int[] SortChallengeThree)
-	{
-		int mid = 0;
-       		if(Arr.length % 2 == 0) 
-		{
-			med = (Arr[Arr.length / 2 + 1] + Arr[Arr.length / 2]) / 2;
-		}
-		else
-		{
-			med = Arr[Arr.length / 2];
-		}
-		return med;
-	}
-	
-	public static int[] randomNearSort(int num) 
-	{
-		randomIntsArr(num);
-		for(int i = 0; i < 80000; i++) 
-		{
-			for (int n = 0; n < Arr.length - 1; n++) 
-			{
-				if (Arr[n] > Arr[n + 1]) 
-				{
-					swap(Arr, n, n + 1);
-				}
-			}
-		}
-		return Arr;
-	}
-	
-	public static int[] SortChallengeThree(int num);
-	{
-		randomNearSort(num);
-		for(int x = 1; x < Arr.length; x++)
-		{
-			for(int y = x; y > 0; y--)
-			{
-				if (intArr[y] < Arr[y-1])
-				{
-					swap(Arr, y,y-1);
-				}
-			}
-		}
-		return Arr;
-	}
+	public static void main(String[] args) {
+        int[] Arr = randomNearSort(100000);
+
+        System.out.print("Before: ");
+        for (int num : Arr)
+            System.out.print(num + " ");
+        System.out.println();
+
+        long time = System.nanoTime();
+        challengeThree(Arr);
+        System.out.println(med);
+        time = System.nanoTime() - time;
+
+        System.out.print("After: ");
+        for (int num : Arr)
+            System.out.print(num + " ");
+        System.out.println();
+
+        System.out.println("Time Taken: " + time);
+    }
+
+    public static int[] randomIntsArr(int num) {
+        int[] arr = new int[num];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (Math.random() * 10000);
+        }
+        return arr;
+    }
+
+    public static int challengeThree(int[] Arr) {
+        for (int x = 1; x < Arr.length; x++) {
+            for (int y = x; y > 0; y--) {
+                if (Arr[y] < Arr[y - 1]) {
+                    swap(Arr, y, y - 1);
+                }
+            }
+        }
+        if (Arr.length % 2 == 0) {
+            int med = (Arr[Arr.length / 2 + 1] + Arr[Arr.length / 2]) / 2;
+            return med;
+        } else {
+            int med = Arr[Arr.length / 2];
+            return med;
+        }
+    }
+
+    public static int[] randomNearSort(int num) {
+        int[] Arr = randomIntsArr(num);
+        for (int i = 0; i < 80000; i++) {
+            for (int n = 0; n < Arr.length - 1; n++) {
+                if (Arr[n] > Arr[n + 1]) {
+                    swap(Arr, n, n + 1);
+                }
+            }
+        }
+        return Arr;
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 
 	public static int challengeFour(int[][] arr)
 	{
