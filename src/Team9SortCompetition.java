@@ -2,7 +2,7 @@
 //Name your class Team#SortCompetition.
 //e.g. Team 1 should name their class Team1SortCompetition
 public abstract class
-SortCompetition {
+Team9SortCompetition {
 	
         private void swap(int[] arr, int i, int j) {
         	int temp = arr[i];
