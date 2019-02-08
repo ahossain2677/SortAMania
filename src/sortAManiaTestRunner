@@ -18,6 +18,27 @@ public static void main (String[] args)
   printArr(randIntArr); // check if the array was sorted correctly 
   
   public static void main(String[] args) {
+  //Challenge One
+        int[] Arr = randomIntsArr(10000);
+
+        System.out.print("Before: ");
+        for (int num : Arr)
+            System.out.print(num + " ");
+        System.out.println();
+
+        long time = System.nanoTime();
+        challengeOne(Arr);
+        time = System.nanoTime() - time;
+
+        System.out.print("After: ");
+        for (int num : Arr)
+            System.out.print(num + " ");
+        System.out.println();
+
+        System.out.println("Time Taken: " + time);
+        System.out.println("Median: " + challengeOne(Arr));
+  
+  //Challenge Three
         int[] Arr = randomNearSort(100000);
 
         System.out.print("Before: ");
