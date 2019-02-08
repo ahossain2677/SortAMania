@@ -49,37 +49,15 @@ SortCompetition {
 
     public abstract int challengeTwo(String[] arr, String query);
         {
-            String word = "hello";
-            int x=(1);
-            int y = (x+1);
-            String[] arr = String str2;
-            String arr[y] = String str1;
-            String arr[0] = String strI ;
-            int var0 = strI.compareTo(word);
-            if(var0 = 0)
-            { System.out.print("0");
-            }else{
-            System.out.print("-1"); }
-            System.out.print(",");
-            
-            public class CompareTo {
-
-        for(x=1;x=<10000;x++)
-                {
-
-                    int var1 = str1.compareTo(str2);
-                    if(var1=0)
-                    {
-                        System.out.print(x);
-                    }
-                    else
-                    {
-                        System.out.print("-1");
-                    }
-                    System.out.print(",");
-                }
-            }
-
+     bubbleSort(list);
+		for(int i = 0; i < list.length; i++)
+		{
+			if(list[i].compareTo(theString) == 0)
+			{
+				return i;
+			}
+		}
+		return -1;
         }
 
 	public static int challengeThree(int[] SortChallengeThree)
