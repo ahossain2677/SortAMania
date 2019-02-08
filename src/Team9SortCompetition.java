@@ -49,10 +49,11 @@ Team9SortCompetition {
 
     public int challengeTwo(String[] arr, String query);
         {
-     bubbleSort(list);
-		for(int i = 0; i < list.length; i++)
+		
+     bubbleSort(arr);
+		for(int i = 0; i < arr.length; i++)
 		{
-			if(list[i].compareTo(theString) == 0)
+			if(arr[i].compareTo(theString) == 0)
 			{
 				return i;
 			}
