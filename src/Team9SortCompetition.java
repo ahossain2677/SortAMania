@@ -4,47 +4,57 @@
 public abstract class
 Team9SortCompetition {
 	
-        private void swap(int[] arr, int i, int j) {
-        	int temp = arr[i];
-       	        arr[i] = arr[j];
-       		arr[j] = temp;
-    	}
-	
-	private void bubbleSort(int[] arr){
-        int x = 1;
-        while (x !=0){
-            x=0;
-            for (int i=0; i<arr.length-1; i++){
-                if (arr[i] > arr[i + 1]) {
-                    swap(arr, arr[i], arr[i+1]);
-                    x++;
+        public static void swap(int[] arr, int i, int j)
+    {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static int[] Sort(int[] arr)
+    {
+        for(int x = 1; x < arr.length; x++)
+        {
+            for(int y = x; y > 0; y--)
+            {
+                if (arr[y] < arr[y-1])
+                {
+                    swap(arr, y,y-1);
                 }
             }
         }
+        return arr;
     }
-	
-	public int challengeOne(int[] arr){
-		bubbleSort(arr);
-		median(arr);
-	}
-	
-	public static int[] randomIntsArr(int num){
-        	int []arr = new int[num];
-        	for(int i =0; i <arr.length; i++){
-      	        arr[i] = (int)(Math.random()*10000);
-       		}
-           return arr;
-    	}
-	
-	public static int median(int[] arr) {
-       		 int med = 0;
-       		 if(arr.length % 2 == 0) {
-        	 med = (arr[arr.length / 2 + 1] + arr[arr.length / 2]) / 2;
-       	 }
-       	 else{
-            	 med = arr[arr.length / 2];
+
+    public static int challengeOne(int[] arr)
+    {
+        Sort(arr);
+        return median(arr);
+    }
+
+    public static int[] randomIntsArr(int num)
+    {
+        int []arr = new int[num];
+        for(int i =0; i <arr.length; i++)
+        {
+            arr[i] = (int)(Math.random()*10001);
         }
-        return med;
+        return arr;
+    }
+
+    public static int median(int[] arr)
+    {
+        int med = 0;
+        if(arr.length % 2 == 0)
+        {
+            med = (arr[arr.length / 2 + 1] + arr[arr.length / 2]) / 2;
+            return med;
+        }
+        else
+            {
+                med = arr[arr.length / 2];
+                return med;
+            }
     }
 
     public int challengeTwo(String[] arr, String query);
@@ -98,7 +108,7 @@ Team9SortCompetition {
 		{
 			for(int y = x; y > 0; y--)
 			{
-				if (intArr[y] < Arr[y-1])
+				if (Arr[y] < Arr[y-1])
 				{
 					swap(Arr, y,y-1);
 				}
