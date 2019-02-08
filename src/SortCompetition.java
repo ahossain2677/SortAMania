@@ -23,7 +23,7 @@ SortCompetition {
         }
     }
 	
-	public abstract int challengeOne(int[] arr){
+	public int challengeOne(int[] arr){
 		bubbleSort(arr);
 		median(arr);
 	}
@@ -47,7 +47,7 @@ SortCompetition {
         return med;
     }
 
-    public abstract int challengeTwo(String[] arr, String query);
+    public int challengeTwo(String[] arr, String query);
         {
      bubbleSort(list);
 		for(int i = 0; i < list.length; i++)
