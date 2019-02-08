@@ -4,13 +4,13 @@
 public abstract class
 SortCompetition {
 	
-        public static void swap(int[] arr, int i, int j) {
+        private void swap(int[] arr, int i, int j) {
         	int temp = arr[i];
        	        arr[i] = arr[j];
        		arr[j] = temp;
     	}
 	
-	public static void bubbleSort(int[] arr){
+	private void bubbleSort(int[] arr){
         int x = 1;
         while (x !=0){
             x=0;
