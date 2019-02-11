@@ -37,6 +37,25 @@ public static void main (String[] args)
 
         System.out.println("Time Taken: " + time);
         System.out.println("Median: " + challengeOne(Arr));
+  //Challenge Two
+  String[] Arr = randomNearSort(100000);
+
+        System.out.print("Before: ");
+        for (int num : Arr)
+            System.out.print(num + " ");
+        System.out.println();
+
+        long time = System.nanoTime();
+        challengeTwo(Arr);
+        System.out.println(med);
+        time = System.nanoTime() - time;
+
+        System.out.print("After: ");
+        for (int num : Arr)
+            System.out.print(num + " ");
+        System.out.println();
+
+        System.out.println("Time Taken: " + time);
   
   //Challenge Three
         int[] Arr = randomNearSort(100000);
