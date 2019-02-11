@@ -4,14 +4,14 @@
 public abstract class
 Team9SortCompetition {
 	
-        public static void swap(int[] arr, int i, int j)
+        private void swap(int[] arr, int i, int j)
     {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
-    public static int[] Sort(int[] arr)
+    private int[] Sort(int[] arr)
     {
         for(int x = 1; x < arr.length; x++)
         {
@@ -26,7 +26,7 @@ Team9SortCompetition {
         return arr;
     }
 
-	public static void bubbleSort(String[]list1) 
+	private void bubbleSort(String[]list1) 
 	{
 		for(int i = 0; i < arr.length-1; i++) 
 		{
