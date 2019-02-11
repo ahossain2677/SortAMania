@@ -1,17 +1,16 @@
 //Implement this abstract class in your own class in this project.
 //Name your class Team#SortCompetition.
 //e.g. Team 1 should name their class Team1SortCompetition
-public abstract class
-Team9SortCompetition {
+public class Team9SortCompetition {
 	
-        private void swap(int[] arr, int i, int j)
+	public static void swap(int[] arr, int i, int j)
     {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
 
-    private int[] Sort(int[] arr)
+    public static int[] Sort(int[] arr)
     {
         for(int x = 1; x < arr.length; x++)
         {
@@ -24,27 +23,6 @@ Team9SortCompetition {
             }
         }
         return arr;
-    }
-
-	private void bubbleSort(String[]list1) 
-	{
-		for(int i = 0; i < arr.length-1; i++) 
-		{
-			for(int j = i+1; j < arr.length; j++)
-			{
-				if(arr[i].compareTo(arr[j]) < 0) 
-				{
-					String temp = arr[j];
-					arr[j] = arr[i];
-					arr[i] = temp;
-				}
-			}
-		}
-	}
-	
-	
-        swapInt(arr, i + 1, right);
-        return i + 1;
     }
 		
 	public static int challengeOne(int[] arr)
@@ -78,10 +56,10 @@ Team9SortCompetition {
             }
     }
 
-    public int challengeTwo(String[] arr, String query);
-        {
+    public int challengeTwo(String[] arr, String query)
+    {
 		
-     bubbleSort(arr);
+     Sort(arr);
 		for(int i = 0; i < arr.length; i++)
 		{
 			if(arr[i].compareTo(theString) == 0)
@@ -92,9 +70,9 @@ Team9SortCompetition {
 		return -1;
         }
 
-	public static int challengeThree(int[] SortChallengeThree)
+	public static int challengeThree(int[] Arr)
 	{
-		int mid = 0;
+		int med = 0;
        		if(Arr.length % 2 == 0) 
 		{
 			med = (Arr[Arr.length / 2 + 1] + Arr[Arr.length / 2]) / 2;
@@ -108,10 +86,10 @@ Team9SortCompetition {
 	
 	public static int[] randomNearSort(int num) 
 	{
-		randomIntsArr(num);
+		int[] Arr = randomIntsArr(num);
 		for(int i = 0; i < 80000; i++) 
 		{
-			for (int n = 0; n < Arr.length - 1; n++) 
+			for (int n = 0; n < Arr.length - 1; n++)
 			{
 				if (Arr[n] > Arr[n + 1]) 
 				{
@@ -121,10 +99,9 @@ Team9SortCompetition {
 		}
 		return Arr;
 	}
-	
-	public static int[] SortChallengeThree(int num);
+	public static int[] SortChallengeThree(int num)
 	{
-		randomNearSort(num);
+        int[] Arr = randomNearSort(num);
 		for(int x = 1; x < Arr.length; x++)
 		{
 			for(int y = x; y > 0; y--)
@@ -138,14 +115,16 @@ Team9SortCompetition {
 		return Arr;
 	}
 	
-public int challengeFour(int[][] arr){
-     
+    public static int challengeFour(int[][] arr){
     }
 
 
-	public abstract int challengeFive(Comparable[] arr, Comparable query);
+	public static int challengeFive(Comparable[] arr, Comparable query){
+    }
 
 	//Add a custom greeting so your sorter can introduce itself
-	public abstract String greeting();
+	public static String greeting() {
+
+    }
 }
 

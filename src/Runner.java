@@ -1,6 +1,7 @@
-  public static void main(String[] args) {
-  //Challenge One
-        int[] Arr = randomIntsArr(10000);
+public class Runner {
+    public static void main(String[] args) {
+        //Challenge One
+        int[] Arr = Team9SortCompetition.randomIntsArr(10000);
 
         System.out.print("Before: ");
         for (int num : Arr)
@@ -18,9 +19,9 @@
 
         System.out.println("Challenge One Time Taken: " + time*0.001 + "Seconds");
         System.out.println("Median: " + Team9SortCompetition.challengeOne(Arr));
-        
-  //Challenge Two
-        String[] Arr = randomNearSort(100000);
+
+        //Challenge Two
+        String[] Arr = Team9SortCompetition.randomNearSort(100000);
 
         System.out.print("Before: ");
         for (int num : Arr)
@@ -38,9 +39,9 @@
         System.out.println();
 
         System.out.println("CHallenge Two Time Taken: " + time1*0.001 + "Seconds");
-  
-  //Challenge Three
-        int[] Arr = randomNearSort(100000);
+
+        //Challenge Three
+        int[] Arr = Team9SortCompetition.randomNearSort(100000);
 
         System.out.print("Before: ");
         for (int num : Arr)
@@ -60,4 +61,6 @@
         System.out.println("Challenge Three Time Taken: " + time2*0.001 + "Seconds");
         System.out.println("Median: " + Team9SortCompetition.challengeThree(Arr));
     }
+}
+
 }
