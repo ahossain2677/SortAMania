@@ -46,17 +46,17 @@ public static void main (String[] args)
             System.out.print(num + " ");
         System.out.println();
 
-        long time = System.nanoTime();
+        long time1 = System.nanoTime();
         Team9SortCompetition.challengeTwo(Arr);
         System.out.println(med);
-        time = System.nanoTime() - time;
+        time = System.nanoTime() - time1;
 
         System.out.print("After: ");
         for (int num : Arr)
             System.out.print(num + " ");
         System.out.println();
 
-        System.out.println("CHallenge Two Time Taken: " + time);
+        System.out.println("CHallenge Two Time Taken: " + time1);
   
   //Challenge Three
         int[] Arr = randomNearSort(100000);
@@ -66,17 +66,17 @@ public static void main (String[] args)
             System.out.print(num + " ");
         System.out.println();
 
-        long time = System.nanoTime();
+        long time2 = System.nanoTime();
         Team9SortCompetition.challengeThree(Arr);
         System.out.println(med);
-        time = System.nanoTime() - time;
+        time = System.nanoTime() - time2;
 
         System.out.print("After: ");
         for (int num : Arr)
             System.out.print(num + " ");
         System.out.println();
 
-        System.out.println("Challenge Three Time Taken: " + time);
+        System.out.println("Challenge Three Time Taken: " + time2);
         System.out.println("Median: " + Team9SortCompetition.challengeThree(Arr));
     }
 }
