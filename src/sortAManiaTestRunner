@@ -36,7 +36,8 @@ public static void main (String[] args)
         System.out.println();
 
         System.out.println("Time Taken: " + time);
-        System.out.println("Median: " + challengeOne(Arr));
+        System.out.println("Median: " + Team9SortCompetition.challengeOne(Arr));
+        
   //Challenge Two
   String[] Arr = randomNearSort(100000);
 
@@ -76,5 +77,6 @@ public static void main (String[] args)
         System.out.println();
 
         System.out.println("Time Taken: " + time);
+        System.out.println("Median: " + Team9SortCompetition.challengeThree(Arr));
     }
 }
