@@ -26,10 +26,14 @@ Team9SortCompetition {
         return arr;
     }
 
-	private void bubbleSort(String[]list1) {
-		for(int i = 0; i < list1.length-1; i++) {
-			for(int j = i+1; j < list1.length; j++) {
-				if(list1[i].compareTo(list1[j]) < 0) {
+	public static void bubbleSort(String[]list1) 
+	{
+		for(int i = 0; i < list1.length-1; i++) 
+		{
+			for(int j = i+1; j < list1.length; j++)
+			{
+				if(list1[i].compareTo(list1[j]) < 0) 
+				{
 					String temp = list1[j];
 					list1[j] = list1[i];
 					list1[i] = temp;
@@ -37,7 +41,33 @@ Team9SortCompetition {
 			}
 		}
 	}
-    
+	
+	public static void quickSort(int[] arr, int left, int right)//Sort for challenge 4 
+    {
+        if (left < right)
+        {
+            int pivot = partition(arr, left, right);
+
+            quickSort(arr, left, pivot -1);
+            quickSort(arr, pivot+1, right);
+        }
+      
+public static int partition(int[] arr, int left, int right) //Divider of values
+{
+        int pivot = arr[right];
+        int i = left - 1;
+        for (int j = left; j < right; j++) 
+	{
+            if (arr[j] <= pivot) 
+	    {
+                i++;
+                swapInt(arr, i, j);
+            }
+        }
+        swapInt(arr, i + 1, right);
+        return i + 1;
+    }
+		
 	public static int challengeOne(int[] arr)
     {
         Sort(arr);
@@ -128,11 +158,20 @@ Team9SortCompetition {
 		}
 		return Arr;
 	}
-
-	public static int challengeFour(int[][] arr)
-	{
-		
-	}
+	
+public int challengeFour(int[][] arr){
+        for (int i = 0; i < arr.length; i++)
+        {
+            quickSort(arr[i], 0, arr[i].length - 1);
+        }
+        medianSort(arr, 0, arr.length-1);
+        int[] medianArr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++)
+        {
+            medianArr[i] = getMedian(arr[i]);
+        }
+        return getMedian(medianArr);
+    }
 
 
 	public abstract int challengeFive(Comparable[] arr, Comparable query);
