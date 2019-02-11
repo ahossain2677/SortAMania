@@ -62,7 +62,7 @@ public class Team9SortCompetition {
      Sort(arr);
 		for(int i = 0; i < arr.length; i++)
 		{
-			if(arr[i].compareTo(theString) == 0)
+			if(arr[i].compareTo(arr[i++]) == 0)
 			{
 				return i;
 			}
