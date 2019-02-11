@@ -42,28 +42,7 @@ Team9SortCompetition {
 		}
 	}
 	
-	public static void quickSort(int[] arr, int left, int right)//Sort for challenge 4 
-    {
-        if (left < right)
-        {
-            int pivot = partition(arr, left, right);
-
-            quickSort(arr, left, pivot -1);
-            quickSort(arr, pivot+1, right);
-        }
-      
-public static int partition(int[] arr, int left, int right) //Divider of values
-{
-        int pivot = arr[right];
-        int i = left - 1;
-        for (int j = left; j < right; j++) 
-	{
-            if (arr[j] <= pivot) 
-	    {
-                i++;
-                swapInt(arr, i, j);
-            }
-        }
+	
         swapInt(arr, i + 1, right);
         return i + 1;
     }
@@ -160,17 +139,7 @@ public static int partition(int[] arr, int left, int right) //Divider of values
 	}
 	
 public int challengeFour(int[][] arr){
-        for (int i = 0; i < arr.length; i++)
-        {
-            quickSort(arr[i], 0, arr[i].length - 1);
-        }
-        medianSort(arr, 0, arr.length-1);
-        int[] medianArr = new int[arr.length];
-        for (int i = 0; i < arr.length; i++)
-        {
-            medianArr[i] = getMedian(arr[i]);
-        }
-        return getMedian(medianArr);
+     
     }
 
 
