@@ -28,15 +28,15 @@ Team9SortCompetition {
 
 	public static void bubbleSort(String[]list1) 
 	{
-		for(int i = 0; i < list1.length-1; i++) 
+		for(int i = 0; i < arr.length-1; i++) 
 		{
-			for(int j = i+1; j < list1.length; j++)
+			for(int j = i+1; j < arr.length; j++)
 			{
-				if(list1[i].compareTo(list1[j]) < 0) 
+				if(arr[i].compareTo(arr[j]) < 0) 
 				{
-					String temp = list1[j];
-					list1[j] = list1[i];
-					list1[i] = temp;
+					String temp = arr[j];
+					arr[j] = arr[i];
+					arr[i] = temp;
 				}
 			}
 		}
