@@ -34,7 +34,7 @@ public class Team9SortCompetition {
             }
         }
 	
-	public static void swap(String [] arr, String i, String j)
+	public static void swap(String [] arr, String i, String j)  // swap for challenge 2 bubble sort
     {
         String temp = arr[i];
         arr[i] = arr[j];
