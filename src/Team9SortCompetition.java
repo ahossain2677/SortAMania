@@ -34,6 +34,13 @@ public class Team9SortCompetition {
             }
         }
 	
+	public static void swap(String [] arr, String i, String j)
+    {
+        String temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+	
 	public static int challengeOne(int[] arr)
     {
         Sort(arr);
