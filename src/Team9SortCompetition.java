@@ -56,19 +56,44 @@ public class Team9SortCompetition {
             }
     }
 
-    public int challengeTwo(String[] arr, String query)
-    {
-		
-     Sort(arr);
-		for(int i = 0; i < arr.length; i++)
-		{
-			if(arr[i].compareTo(arr[i++]) == 0)
-			{
-				return i;
-			}
-		}
-		return -1;
+        public int challengeTwo(String[] arr, String query) {//////////
+        quickSortStr(arr, 0, arr.length-1);
+        boolean x = false; int lwr = 0; int upr = arr.length - 1; int mid = arr.length/2 - 1;
+        while (!x) {
+            if (query.compareTo(arr[mid]) > 0) {
+                lwr = mid; mid = ((upr - lwr) / 2) + lwr;
+            }
+            else if (query.compareTo(arr[mid]) < 0) {
+                upr = mid; mid = ((upr - lwr) / 2) + lwr;
+            }
+            else return mid;
+            if (upr <= lwr || lwr == mid || upr == mid) {
+                x = true;
+            }
         }
+        return -1;
+    }
+
+        private void quickSortStr(String[] arr, int x, int y) {
+            if (x < y) {
+                int z = partStr(arr, x, y);
+                quickSortStr(arr, x, z - 1);
+                quickSortStr(arr, z + 1, y);
+            }
+        }
+        private int partStr(String[] arr, int x, int y) {
+            String z = arr[y];
+            int i = x - 1;
+
+            for (int j = x; j < y; j ++) {
+                if (arr[j].compareTo(z) <= 0) {
+                    i ++;
+                    String k = arr[i]; arr[i] = arr[j]; arr[j] = k;
+                }
+            }
+            String l = arr[i + 1]; arr[i + 1] = arr[y]; arr[y] = l;
+            return i + 1;
+        }/////////////////////////
 
 	public static int challengeThree(int[] Arr)
 	{
